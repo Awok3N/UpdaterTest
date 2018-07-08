@@ -1,11 +1,11 @@
 {
-  "name": "electron-updater-example",
-  "version": "0.6.3",
+  "name": "UpdaterTest",
+  "version": "0.6.5",
   "main": "main.js",
-  "description": "electron-updater example project",
-  "author": "Matt Haggard",
+  "description": "electron-updater",
+  "author": "A. Vuksanovic",
   "scripts": {
-    "publish": "build -p always"
+    "publish": "build --win -p always"
   },
   "devDependencies": {
     "electron": "^1.7.9",
@@ -16,13 +16,16 @@
     "electron-updater": "^2.21.4"
   },
   "build": {
-    "appId": "com.github.iffy.electronupdaterexample",
-    "mac": {
-      "category": "your.app.category.type",
-      "target": [
-        "zip",
-        "dmg"
-      ]
-    }
+    "appId": "com.github.Awok3N.updatertest",
+    "target": [
+      "nsis"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Awok3N",
+        "repo": "UpdaterTest"
+      }
+    ]
   }
 }
